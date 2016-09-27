@@ -6,7 +6,7 @@ var path = require('path');
 app.get('/', function(req, res){
 
     var os = req.headers["user-agent"].split("(")[1].split(")")[0],
-    language = req.acceptedLanguages[0],
+    language = req.headers['accept-language'],
     ip = req.headers['x-forwarded-for'];
     
     var info = {
@@ -30,4 +30,6 @@ res.send(
 
 });
 
-app.listen(process.env.PORT || 8080);
+app.listen(8080, function(){
+    console.log('Example app listening on port 8080!');
+});
