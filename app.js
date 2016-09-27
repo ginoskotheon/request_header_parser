@@ -1,6 +1,7 @@
 var http = require('http');
 var express = require("express");
 var app = express();
+var path = require('path');
 
 app.get('/', function(req, res){
 
@@ -16,7 +17,7 @@ app.get('/', function(req, res){
     };
 
     // res.json(info);
-res.end(
+res.send(
     "<html>" +
     "<head><title>Request Header Parser</title></head>" +
     "<body>" +
