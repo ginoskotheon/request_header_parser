@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ginoskotheon/request_header_parser#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "express-useragent": "^1.0.3"
   }
 }
